@@ -1,13 +1,8 @@
-const listAll = require("./listAll");
+const getAll = require("./getAll");
 const getById = require("./getById");
 const add = require("./add");
-const removeById = require("./removeById");
+const remove = require("./remove");
 const updateById = require("./updateById");
+const patchById = require("./patchById");
 
-module.exports = {
-  listAll,
-  getById,
-  add,
-  removeById,
-  updateById,
-};
+module.exports = { getAll, getById, add, remove, updateById, patchById };

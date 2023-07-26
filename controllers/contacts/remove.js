@@ -1,15 +1,13 @@
 const Contact = require("../../models/contacts");
 const errorHandler = require("../../helpers/errorHandler");
 
-const updateById = async (req, res) => {
+const remove = async (req, res) => {
   const { contactId } = req.params;
-  const result = await Contact.findByIdAndUpdate(contactId, req.body, {
-    new: true,
-  });
+  const result = await Contact.findByIdAndDelete(contactId);
   if (!result) {
     throw errorHandler(404, "Contact not found");
   }
-  res.json(result);
+  res.json("Contact deleted");
 };
 
-module.exports = updateById;
+module.exports = remove;
