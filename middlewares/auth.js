@@ -20,7 +20,6 @@ const auth = async (req, res, next) => {
 
     const user = await User.findById(payload.userId);
     if (!user || !user.token || user.token !== token) {
-      console.log(user, user.token, token);
       throw errorHandler(401, "Invalid token");
     }
 

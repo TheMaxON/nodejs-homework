@@ -12,8 +12,8 @@ const registration = async (req, res) => {
     password: hashedPassword,
   });
   res.status(201).json({
-    id: result._id,
     email,
+    subscription: result.subscription,
   });
 };
 
