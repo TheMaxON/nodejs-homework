@@ -20,7 +20,6 @@ router.post(
 
 router.post(
   "/logout",
-  validateBody(schema.userSchema),
   controllerWrapper(auth),
   controllerWrapper(controller.logout)
 );
