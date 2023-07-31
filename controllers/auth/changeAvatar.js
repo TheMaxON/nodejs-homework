@@ -12,7 +12,7 @@ const changeAvatar = async (req, res) => {
   const { _id } = req.user;
   const newFileName = `${_id}_${originalname}`;
 
-  const tempPath = path.resolve(__dirname, "../../", "temp", filename);
+  const tempPath = path.resolve(__dirname, "../../", "tmp", filename);
   const newPath = path.resolve(
     __dirname,
     "../../",
